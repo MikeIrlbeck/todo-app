@@ -1,10 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import { data } from './data';
 import Item from './components/Item';
 function App() {
   const addItem = () => {
     console.log('hello add');
   };
+  data.forEach((element) => {
+    console.log(element.name);
+  });
   return (
     <div className='App'>
       {/* <header className="App-header">
@@ -21,9 +25,15 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <h1>TODO LIST</h1>
       <button onClick={addItem}>Add</button>
       <Item></Item>
       <Item></Item>
+      <section>
+        {data.map((el) => {
+          return <Item key={el.id} {...el}></Item>;
+        })}
+      </section>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Item = () => {
+const Item = ({ name = 'Item' }) => {
   const deleteItem = () => {
     console.log('hello delete');
   };
@@ -8,7 +8,7 @@ const Item = () => {
     // react fragment
 
     <>
-      <h2>Item</h2>
+      <h2>{name}</h2>
       <button onClick={deleteItem}>Delete</button>
     </>
   );
