@@ -2,9 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const addItem = () => {
+    console.log('hello add');
+  };
+  const deleteItem = () => {
+    console.log('hello delete');
+  };
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +23,10 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <button onClick={addItem}>Add</button>
+      <h2>Item</h2>
+      <button onClick={deleteItem}>Delete</button>
     </div>
   );
 }
