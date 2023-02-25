@@ -1,12 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Item from './components/Item';
 function App() {
   const addItem = () => {
     console.log('hello add');
-  };
-  const deleteItem = () => {
-    console.log('hello delete');
   };
   return (
     <div className='App'>
@@ -25,8 +22,8 @@ function App() {
         </a>
       </header> */}
       <button onClick={addItem}>Add</button>
-      <h2>Item</h2>
-      <button onClick={deleteItem}>Delete</button>
+      <Item></Item>
+      <Item></Item>
     </div>
   );
 }
